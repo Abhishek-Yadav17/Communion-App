@@ -1,0 +1,322 @@
+@font-face {
+  font-family: Neu;
+  src: url(/Rejouice-Headline.ttf);
+}
+
+@font-face {
+  font-family: Neu2;
+  src: url(/64d3dd9edfb41666c35b15c0_NeueHaasDisplay-Roman.ttf);
+}
+
+.events {
+  min-height: 100vh;
+  width: 100%;
+  font-family: Neu2;
+
+  header {
+    width: 100%;
+    height: 5vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 3vw;
+    background-color: #232121;
+
+    img {
+      height: 3.5vw;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4vw;
+
+      a {
+        text-decoration: none;
+        color: #FFF;
+        font-weight: bold;
+        font-size: 1.2vw;
+        position: relative;
+      }
+
+      a::after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #FFF;
+        transition: all ease 0.5s;
+      }
+
+      a:hover::after {
+        width: 100%;
+      }
+    }
+
+    button {
+      padding: 1vw 1.5vw;
+      border-radius: 50px;
+      background-color: #FFF;
+      font-size: 1vw;
+      color: #000;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+    .modal-content {
+      background-color: white;
+      padding: 2vw;
+      border-radius: 22px;
+      max-width: 450px;
+      width: 100%;
+      height: fit-content;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+      h3 {
+        font-size: 1.7vw;
+        text-align: center;
+        margin-bottom: 2vw;
+      }
+
+      input,
+      select,
+      textarea {
+        margin-bottom: 1vw;
+        padding: 0.9vw 1.2vw;
+        font-size: 1vw;
+        border-radius: 12px;
+        background-color: #f8f9fa;
+        border: none;
+        color: #333;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        outline: none;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #0066cc;
+        box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+      }
+
+      input::placeholder,
+      select::placeholder,
+      textarea::placeholder {
+        color: #999;
+        font-size: 1vw;
+      }
+
+      input:hover,
+      select:hover,
+      textarea:hover {
+        border-color: #007bff;
+        background-color: #f1f3f5;
+      }
+
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: #f8f9fa;
+        font-size: 1vw;
+      }
+
+      textarea {
+        font-family: Neu2;
+        resize: none;
+      }
+
+      button {
+        padding: 0.9vw 1.5vw;
+        border-radius: 50px;
+        background-color: #000;
+        font-size: 1vw;
+        color: #FFF;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        border: none;
+        margin-right: 1.5vw;
+      }
+
+      button:hover {
+        background-color: #272828;
+      }
+
+    }
+  }
+
+  section {
+    height: fit-content;
+    padding: 20px;
+    padding: 2vw 3vw;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 3vw;
+      font-size: 2vw;
+      letter-spacing: 0.2vw;
+    }
+
+    article {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2vw;
+
+      h2 {
+        color: #025976;
+        word-spacing: 0.6vw;
+      }
+
+      .filter {
+        display: flex;
+        align-items: center;
+        gap: 1.5vw;
+        padding: 0.3vw 1.3vw;
+        background-color: #f7f7f7;
+        border-radius: 25px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        font-size: 1vw;
+        transition: all 0.3s ease;
+
+        label {
+          white-space: nowrap;
+          font-weight: bold;
+        }
+
+        select {
+          padding: 0.8vw 1.2vw;
+          font-size: 1vw;
+          font-weight: 500;
+          color: #333;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          background-color: #fff;
+          appearance: none;
+          outline: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            border-color: #000;
+          }
+      
+          &:focus {
+            border-color: #000;
+            box-shadow: 0 0 5px rgba(1, 1, 1, 0.5);
+          }
+        }
+      }
+    }
+
+    .events-list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3vw;
+      padding-left: 4vw;
+
+      div {
+        position: relative;
+        height: 20vw;
+        width: 26vw;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 1px 34px -12px rgba(0, 0, 0, 0.75);
+        color: #FFF;
+        overflow: hidden;
+
+        .lists {
+          display: flex;
+          padding: 1.5vw 2vw;
+          flex-direction: column;
+
+          h3 {
+            font-size: 2vw;
+            margin-bottom: 1vw;
+          }
+
+          span {
+            width: fit-content;
+            font-size: 1.2vw;
+            background-color: #D9D9D9;
+            border-radius: 7px;
+            padding: 0.5vw;
+            color: #000;
+          }
+        }
+
+        .overlay {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          backdrop-filter: blur(20px);
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0.3s ease, opacity 0.3s ease-in-out;
+          padding: 1.5vw 2vw;
+
+          h3 {
+            font-size: 2vw;
+            margin-bottom: 3vw;
+          }
+
+          p {
+            margin-bottom: 0.9vw;
+
+            span {
+              font-weight: bold;
+              margin-right: 0.2vw;
+            }
+          }
+
+          article {
+            margin-top: 1.5vw;
+
+            button {
+              padding: 0.8vw 0.9vw;
+              border-radius: 50px;
+              border: none;
+              background-color: #000;
+              color: #FFF;
+              cursor: pointer;
+            }
+
+            svg {
+              cursor: pointer;
+            }
+          }
+        }
+
+        &:hover .overlay {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

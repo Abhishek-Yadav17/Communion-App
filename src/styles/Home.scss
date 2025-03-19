@@ -1,0 +1,128 @@
+@font-face {
+    font-family: Neu;
+    src: url(/Rejouice-Headline.ttf);
+}
+
+@font-face {
+    font-family: Neu2;
+    src: url(/64d3dd9edfb41666c35b15c0_NeueHaasDisplay-Roman.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    font-family: Neu2;
+    background-image: url(/Events.jpg);
+    background-size: cover;
+    background-position: top;
+
+    header {
+        height: 5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vw 3vw;
+        color: #fff;
+        background-color: transparent;
+        backdrop-filter: blur(6px);
+
+        img {
+            height: 3.5vw;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 4vw;
+
+            a {
+                font-size: 1.2vw;
+                text-decoration: none;
+                color: #fff;
+                position: relative;
+            }
+
+            a::after {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                background-color: #FFF;
+                transition: all ease 0.5s;
+            }
+
+            a:hover::after {
+                width: 100%;
+            }
+        }
+    }
+
+    section {
+        height: calc(100vh - 6vw);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 3%;
+        color: #FFF;
+
+        h1 {
+            width: 55%;
+            font-size: 7vw;
+            text-align: center;
+            font-family: Neu;
+            line-height: 6.9vw;
+            margin: 0.1vw;
+        }
+
+        h4 {
+            font-size: 1.7vw;
+            margin-top: 1.5vw;
+        }
+
+        button {
+            background-color: #e95d17;
+            color: white;
+            padding: 1.4vw 2.2vw;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.3vw;
+            margin-top: 2vw;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                margin-left: 0.3vw;
+            }
+        }
+
+        button::before {
+            content: 'Explore Events';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #060F1A;
+            left: 0;
+            bottom: -100%;
+            transition: bottom 0.3s ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button:hover::before {
+            bottom: 0;
+        }
+    }
+}
