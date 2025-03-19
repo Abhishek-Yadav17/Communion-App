@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import '../styles/Home.scss'
 
 const Home = () => {
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     gsap.fromTo(
@@ -84,7 +87,7 @@ const Home = () => {
         <nav>
           <div className='circle'></div>
           <a href="/">Home</a>
-          <a href="/events">Events</a>
+          <Link to="/events">Events</Link>
           <a href="#">About</a>
         </nav>
       </header>
@@ -93,7 +96,7 @@ const Home = () => {
         <h1>People Across</h1>
         <h1>Faiths & Interests</h1>
         <h4>Connecting people of all faiths through events and community support</h4>
-        <button className="cta-button" onClick={() => window.location.href = '/events'}>
+        <button className="cta-button" onClick={() => navigate('/events')}>
           Explore Events
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className='arrow-icon'>
             <path d="M5 12h14M12 5l7 7-7 7"></path>

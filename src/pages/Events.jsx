@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Events.scss';
 import gsap from 'gsap';
 
@@ -163,7 +164,7 @@ const Events = () => {
         <img src="/MyLogo.png" alt="Logo" />
         <nav>
           <a href="/">Home</a>
-          <a href="/events">Events</a>
+          <Link to="/events">Events</Link>
           <a href="#">About</a>
         </nav>
         <button onClick={() => setIsModalOpen(true)}>Add Event</button>
