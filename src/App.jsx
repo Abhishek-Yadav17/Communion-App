@@ -5,7 +5,7 @@ import Events from './pages/Events';
 
 const App = () => {
   return (
-    <Routes basename="/Communion-App">
+    <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/events" element={<Events />} />
     </Routes>

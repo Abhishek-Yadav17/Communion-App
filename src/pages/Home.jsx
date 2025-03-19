@@ -80,7 +80,7 @@ const Home = () => {
   return (
     <main className="home">
       <header>
-        <img src="/Logo.png" alt="logo" />
+        <img src="/MyLogo.png" alt="logo" />
         <nav>
           <div className='circle'></div>
           <a href="/">Home</a>

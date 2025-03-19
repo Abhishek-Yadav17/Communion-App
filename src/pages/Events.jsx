@@ -160,7 +160,7 @@ const Events = () => {
   return (
     <div className="events">
       <header>
-        <img src="/Logo.png" alt="" />
+        <img src="/MyLogo.png" alt="Logo" />
         <nav>
           <a href="/">Home</a>
           <a href="/events">Events</a>
