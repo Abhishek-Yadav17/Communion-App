@@ -220,7 +220,7 @@ const Events = () => {
         <article>
           <h2> ✦ Upcoming Events</h2>
           <div className="filter">
-            <label>Filter by Category:</label>
+            <label>Filter by Category :</label>
             <select value={filter} onChange={(e) => setFilter(e.target.value)}>
               <option value="All">All</option>
               <option value="Religious">Religious</option>

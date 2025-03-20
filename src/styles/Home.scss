@@ -34,6 +34,14 @@ main {
 
         img {
             height: 3.5vw;
+
+            @media (max-width: 600px) {
+                height: 7vw;
+            }
+
+            @media (max-width: 400px) {
+                height: 9vw;
+            }
         }
 
         nav {
@@ -41,11 +49,23 @@ main {
             align-items: center;
             gap: 4vw;
 
+            i {
+                display: none;
+
+                @media (max-width: 600px) {
+                    display: initial;
+                }
+            }
+
             a {
                 font-size: 1.2vw;
                 text-decoration: none;
                 color: #fff;
                 position: relative;
+
+                @media (max-width: 600px) {
+                    display: none;
+                }
             }
 
             a::after {
@@ -62,6 +82,14 @@ main {
             a:hover::after {
                 width: 100%;
             }
+        }
+
+        @media (max-width: 600px) {
+            height: 12vw;
+        }
+        
+        @media (max-width: 400px) {
+            height: 15vw;
         }
     }
 
@@ -80,11 +108,28 @@ main {
             font-family: Neu;
             line-height: 6.9vw;
             margin: 0.1vw;
+
+            @media (max-width: 600px) {
+                font-size: 12vw;
+                line-height: 12vw;
+                width: 100%;
+            }
         }
 
         h4 {
             font-size: 1.7vw;
             margin-top: 1.5vw;
+
+            @media (max-width: 600px) {
+                font-size: 3vw;
+                margin-bottom: 4vw;
+                margin-top: 4vw;
+            }
+            
+            @media (max-width: 400px) {
+                text-align: center;
+                width: 70%;
+            }
         }
 
         button {
@@ -105,6 +150,11 @@ main {
             svg {
                 margin-left: 0.3vw;
             }
+
+            @media (max-width: 600px) {
+                font-size: 3vw;
+                padding: 2.5vw 3.2vw;
+            }
         }
 
         button::before {
@@ -124,5 +174,14 @@ main {
         button:hover::before {
             bottom: 0;
         }
+
+        @media (max-width: 600px) {
+            padding-top: 15%;
+        }
+        
+        @media (max-width: 400px) {
+            padding-top: 20%;
+        }
     }
 }
+

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
+import 'remixicon/fonts/remixicon.css';
 import '../styles/Home.scss'
 
 const Home = () => {
@@ -85,7 +86,7 @@ const Home = () => {
       <header>
         <img src="/MyLogo.png" alt="logo" />
         <nav>
-          <div className='circle'></div>
+          <i class="ri-menu-3-line"></i> 
           <a href="/">Home</a>
           <Link to="/events">Events</Link>
           <a href="#">About</a>

@@ -25,6 +25,14 @@
 
     img {
       height: 3.5vw;
+
+      @media (max-width: 600px) {
+        height: 7vw;
+      }
+      
+      @media (max-width: 400px) {
+        height: 9vw;
+      }
     }
 
     nav {
@@ -39,6 +47,15 @@
         font-weight: bold;
         font-size: 1.2vw;
         position: relative;
+
+        @media (max-width: 600px) {
+          font-size: 2vw;
+          font-weight: 400;
+        }
+        
+        @media (max-width: 400px) {
+          font-size: 2.7vw;
+        }
       }
 
       a::after {
@@ -65,6 +82,24 @@
       color: #000;
       border: none;
       cursor: pointer;
+
+      @media (max-width: 600px) {
+        padding: 1.6vw 3.4vw;
+        font-size: 1.8vw;
+      }
+      
+      @media (max-width: 400px) {
+        padding: 1.9vw 3.4vw;
+        font-size: 2.2vw;
+      }
+    }
+
+    @media (max-width: 600px) {
+      height: 12vw;
+    }
+    
+    @media (max-width: 400px) {
+      height: 15vw;
     }
   }
 
@@ -93,6 +128,10 @@
         font-size: 1.7vw;
         text-align: center;
         margin-bottom: 2vw;
+
+        @media (max-width: 600px) {
+          font-size: 2.9vw;
+        }
       }
 
       input,
@@ -108,6 +147,12 @@
         width: 100%;
         transition: all 0.3s ease-in-out;
         outline: none;
+
+        @media (max-width: 600px) {
+          padding: 2.7vw 3vw;
+          font-size: 2vw;
+          margin-bottom: 2vw;
+        }
       }
 
       input:focus,
@@ -122,6 +167,10 @@
       textarea::placeholder {
         color: #999;
         font-size: 1vw;
+
+        @media (max-width: 600px) {
+          font-size: 2vw;
+        }
       }
 
       input:hover,
@@ -137,6 +186,10 @@
         appearance: none;
         background-color: #f8f9fa;
         font-size: 1vw;
+
+        @media (max-width: 600px) {
+          font-size: 2vw;
+        }
       }
 
       textarea {
@@ -154,18 +207,26 @@
         transition: background-color 0.3s ease-in-out;
         border: none;
         margin-right: 1.5vw;
+
+        @media (max-width: 600px) {
+          padding: 1.7vw 3.6vw;
+          font-size: 1.7vw;
+        }
       }
 
       button:hover {
         background-color: #272828;
       }
 
+      @media (max-width: 600px) {
+        width: 350px;
+        padding: 4vw 3vw;
+      }
     }
   }
 
   section {
     height: fit-content;
-    padding: 20px;
     padding: 2vw 3vw;
     display: flex;
     flex-direction: column;
@@ -175,6 +236,16 @@
       margin-bottom: 3vw;
       font-size: 2vw;
       letter-spacing: 0.2vw;
+
+      @media (max-width: 600px) {
+        margin-top: 3vw;
+        font-size: 3.5vw;
+      }
+      
+      @media (max-width: 400px) {
+        margin-top: 4vw;
+        font-size: 4vw;
+      }
     }
 
     article {
@@ -186,6 +257,14 @@
       h2 {
         color: #025976;
         word-spacing: 0.6vw;
+
+        @media (max-width: 600px) {
+          font-size: 2.5vw;
+        }
+        
+        @media (max-width: 400px) {
+          font-size: 4.5vw;
+        }
       }
 
       .filter {
@@ -220,12 +299,40 @@
           &:hover {
             border-color: #000;
           }
-      
+
           &:focus {
             border-color: #000;
             box-shadow: 0 0 5px rgba(1, 1, 1, 0.5);
           }
+
+          @media (max-width: 600px) {
+            font-size: 1.5vw;
+          }
+          
+          @media (max-width: 400px) {
+            font-size: 2vw;
+          }
         }
+
+        @media (max-width: 600px) {
+          font-size: 1.8vw;
+          padding: 1.3vw 2vw;
+        }
+        
+        @media (max-width: 400px) {
+          font-size: 2.3vw;
+          padding: 1.5vw 2vw;
+        }
+      }
+
+      @media (max-width: 600px) {
+        margin-top: 1vw;
+        margin-bottom: 4vw;
+      }
+      
+      @media (max-width: 400px) {
+        margin-top: 4vw;
+        margin-bottom: 8vw;
       }
     }
 
@@ -255,6 +362,15 @@
           h3 {
             font-size: 2vw;
             margin-bottom: 1vw;
+
+            @media (max-width: 600px) {
+              font-size: 3.4vw;
+            }
+            
+            @media (max-width: 400px) {
+              font-size: 6vw;
+              margin-bottom: 2vw;
+            }
           }
 
           span {
@@ -264,6 +380,24 @@
             border-radius: 7px;
             padding: 0.5vw;
             color: #000;
+
+            @media (max-width: 600px) {
+              padding: 1vw;
+              font-size: 1.5vw;
+            }
+
+            @media (max-width: 400px) {
+              padding: 2.5vw;
+              font-size: 3vw;
+            }
+          }
+
+          @media (max-width: 600px) {
+            padding: 3vw 3vw;
+          }
+          
+          @media (max-width: 400px) {
+            padding: 6vw 6vw;
           }
         }
 
@@ -283,6 +417,15 @@
           h3 {
             font-size: 2vw;
             margin-bottom: 3vw;
+
+            @media (max-width: 600px) {
+              font-size: 3.4vw;
+            }
+            
+            @media (max-width: 400px) {
+              font-size: 6vw;
+              margin-bottom: 5vw;
+            }
           }
 
           p {
@@ -291,6 +434,16 @@
             span {
               font-weight: bold;
               margin-right: 0.2vw;
+            }
+
+            @media (max-width: 600px) {
+              font-size: 2vw;
+              margin-bottom: 2vw;
+            }
+            
+            @media (max-width: 400px) {
+              font-size: 3.5vw;
+              margin-bottom: 3vw;
             }
           }
 
@@ -304,11 +457,45 @@
               background-color: #000;
               color: #FFF;
               cursor: pointer;
+
+              @media (max-width: 600px) {
+                padding: 1.5vw 2vw;
+                font-size: 2vw;
+              }
+              
+              @media (max-width: 400px) {
+                padding: 3vw 3.7vw;
+                font-size: 3vw;
+              }
             }
 
             svg {
               cursor: pointer;
+
+              @media (max-width: 600px) {
+                height: 3vw;
+              }
+              
+              @media (max-width: 400px) {
+                height: 4vw;
+              }
             }
+
+            @media (max-width: 600px) {
+              margin-top: 2vw;
+            }
+            
+            @media (max-width: 400px) {
+              margin-top: 3vw;
+            }
+          }
+
+          @media (max-width: 600px) {
+            padding: 3vw 3vw;
+          }
+          
+          @media (max-width: 400px) {
+            padding: 6vw 6vw;
           }
         }
 
@@ -316,6 +503,24 @@
           visibility: visible;
           opacity: 1;
         }
+
+        @media (max-width: 600px) {
+          height: 35vw;
+          width: 45vw;
+        }
+        
+        @media (max-width: 400px) {
+          height: 60vw;
+          width: 85vw;
+        }
+      }
+
+      @media (max-width: 600px) {
+        padding: 0;
+      }
+
+      @media (max-width: 400px) {
+        gap: 7vw;
       }
     }
   }
